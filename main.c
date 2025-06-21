@@ -4,14 +4,22 @@
 #include "methods/help.h"
 #include "methods/save.h"
 #include "methods/remove.h"
+#include "methods/list.h"
+#include "methods/init.h"
 
 int main(int argc, char *argv[265]) {
     if((argc >= 1 && strcmp(argv[1], "help") == 0)) {
         help();
     } else if ((argc >= 1 && strcmp(argv[1], "save") == 0)) {
         save();
+    } else if((argc >= 1 && strcmp(argv[1], "remove")) == 0) {
+        remove();
+    } else if((argc >= 1 && strcmp(argv[1], "list")) == 0) {
+        list();
+    } else if ((argc >= 1 && strcmp(argv[1], "init")) == 0) {
+        init();
     } else if((argc >= 1 && strcmp(argv[1], "")) == 0) {
-        printf("Você pode aprender os comandos digitando -> vex help");
+        help();
     }
     return 0;
 }
